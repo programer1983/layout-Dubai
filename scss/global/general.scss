@@ -1,0 +1,22 @@
+html.unscroll{
+    overflow: hidden;
+}
+
+html{
+    background-color: #272727;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+body.unscroll{
+    overflow: hidden;
+}
+
+  
+.container{
+    max-width: 1830px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

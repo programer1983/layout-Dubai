@@ -1,0 +1,97 @@
+.reviews__inner {
+  margin-top: 10.625rem;
+  padding-bottom: 3.3125rem;
+}
+.reviews__items {
+  margin-bottom: 2.5rem;
+}
+.reviews__item {
+  border: 1px solid #FCD54C;
+  padding: 104px 0.8125rem 1.4375rem 1.875rem;
+  position: relative;
+}
+.reviews__item-img {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 1.875rem;
+  top: 1.25rem;
+}
+.reviews__item-comes {
+  position: absolute;
+  right: 1.875rem;
+  top: 3.125rem;
+}
+.reviews__item-title {
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 700;
+  font-size: 1.5625rem;
+  color: #FFFFFF;
+  margin-top: 1.25rem;
+  margin-bottom: 1.1875rem;
+}
+.reviews__item-subtitle {
+  font-family: "Work+Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #929292;
+  margin-bottom: 2.125rem;
+}
+.reviews__item-subtitle span {
+  color: #FCD54C;
+}
+.reviews__item-text {
+  font-family: "Work+Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #929292;
+  line-height: 162.5%;
+  width: 28.125rem;
+  max-width: 100%;
+}
+
+.reviews__item-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__item-pagination .swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+}
+
+.reviews__item-pagination .swiper-pagination-bullet {
+  background-color: #FCD54C;
+  width: 13px;
+  height: 13px;
+}
+
+@media (max-width: 1300px) {
+  .reviews__inner {
+    width: 75%;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 840px) {
+  .reviews__inner {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .reviews__inner {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .reviews__inner {
+    width: 75%;
+  }
+}
+@media (max-width: 400px) {
+  .reviews__inner {
+    width: 90%;
+  }
+}/*# sourceMappingURL=reviews.css.map */

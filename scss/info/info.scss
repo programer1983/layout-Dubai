@@ -1,0 +1,114 @@
+
+$whiteColor: #FFFFFF;
+$ellowColor: #FCD54C;
+$blackColor: #000000;
+$grayColor: #929292;
+$fontWeight: 400;
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$spaceFonts: "Space Grotesk", sans-serif;
+
+
+
+.info {
+    margin-top: 7.1875rem;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__top {
+        max-width: 69.375rem;
+        padding: 4.375rem 5.875rem;
+        border: 1px solid $ellowColor;
+        margin: 0 auto 4rem;
+    }
+    &__top-text {
+        max-width: 57.4375rem;
+        font-size: 1.875rem;
+        font-family: $gilroyFonts;
+        line-height: 160%;
+        font-weight: $fontWeight;
+        color: $whiteColor;
+        span{
+            color: $ellowColor;      
+        }
+    }
+    &__body {
+        display: flex;
+        column-gap: 1.4375rem;
+        margin: 0 auto;
+    }
+    &__body-item {
+    }
+    &__body-img {
+        margin-bottom: 4.375rem;
+        width: 33.9375rem;
+        height: 19.5rem;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    &__body-text {
+        max-width: 33.9375rem;
+        font-family: $worksansFonts;
+        font-size: 1.125rem;
+        line-height: 160%; 
+        font-weight: $fontWeight;
+        color: #E8E8E8;
+    }
+}
+
+
+@media (max-width: 767px){
+    .info {
+        margin-top: 4.375rem;
+    }
+    .info__top{
+        max-width: 48rem;
+        padding: 2.3125rem 3.625rem;
+    }
+    .info__top-text{
+        font-size: 1.125rem;
+        max-width: 35.625rem;
+    }
+    .info__body-img{
+        width: 20.5rem;
+        height: 12.125rem;
+        margin-bottom: 1.875rem;
+    }
+    .info__body-text{
+        font-size: 0.875rem;
+        max-width: 20.5rem;
+    }
+}
+
+
+@media (max-width: 600px){
+    .info {
+        margin-top: 3.875rem;
+    
+    }
+    .info__body{
+        flex-direction: column;
+        row-gap: 1.25rem;
+    }
+}
+
+@media (max-width: 360px){
+    .info__top{
+        max-width: 18rem;
+        padding: 1.375rem 1.5625rem;
+    }
+    .info__top-text{
+        font-size: 1rem;
+        max-width: 14.875rem;
+    }
+    .info__body-img{
+        width: 18rem;
+        height: 12.125rem;
+        margin-bottom: 1.25rem;
+    }
+    .info__body-text{
+        font-size: 0.875rem;
+        max-width: 18rem;
+    }
+}

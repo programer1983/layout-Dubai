@@ -1,0 +1,129 @@
+$whiteColor: #FFFFFF;
+$ellowColor: #FCD54C;
+$blackColor: #000000;
+$grayColor: #929292;
+$fontWeight: 400;
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$spaceFonts: "Space Grotesk", sans-serif;
+
+.expertise {
+    margin-top: 4.375rem;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 730px;
+        margin: 0 auto;
+    }
+    &__subtitle {
+        font-family: $worksansFonts;
+        color: $ellowColor;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 40px;
+        align-self: flex-start;
+    }
+    &__title {
+        font-family: $gilroyFonts;
+        font-weight: 700;
+        font-size: 4.375rem;
+        line-height: 98.571429%;
+        color: #E8E8E8;
+        max-width: 45.625rem;
+        margin-bottom: 2.0625rem;
+    }
+    &__text {
+        color: #E8E8E8;
+        font-family: $worksansFonts;
+        font-size: 18px;
+        font-weight: $fontWeight;
+        line-height: 160%; 
+        letter-spacing: 2px;
+        margin-bottom: 5.5625rem;
+    }
+    &__block{
+       position: relative;
+    }
+    &__video {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.video {
+    &__item__sourshe{
+       width: 100%;
+    }
+    &__button{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 3;
+        transform: translate(-50%, -50%);
+        background-color: $ellowColor;
+        border-radius: 50%;
+        padding: 18px 14px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__button-img{
+      
+    }
+}
+
+
+@media (max-width: 768px){
+    .expertise__content{
+        width: 100%;
+    }
+    .expertise__subtitle{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .expertise__title{
+        font-size: 30px;
+        max-width: 450px;
+        line-height: 123.8%;
+        margin-bottom: 10px;
+    }
+    .expertise__text{
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .video__button{
+        width: 24px;
+        height: 24px;
+        padding: 8px 6px;
+    }
+    .video__button-img{
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 370px){
+    .expertise__subtitle{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .expertise__title{
+        font-size: 24px;
+        max-width: 288px;
+        line-height: 123.791667%;
+        margin-bottom: 10px;
+    }
+    .expertise__text{
+        font-size: 14px;
+        line-height: 160%;
+        margin-bottom: 40px;
+    }
+}

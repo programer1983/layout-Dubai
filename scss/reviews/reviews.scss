@@ -1,0 +1,111 @@
+$ellowColor: #FCD54C;
+$whiteColor: #FFFFFF;
+$grayColor: #929292;
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$fontWeight: 400;
+
+.reviews {
+    &__inner {
+        margin-top: 10.625rem;
+        padding-bottom: 3.3125rem;
+    }
+    &__items {
+        margin-bottom: 2.5rem;
+    }
+    &__item {
+        border: 1px solid $ellowColor;
+        padding: 104px 0.8125rem 1.4375rem 1.875rem;
+        position: relative;
+    }
+    &__item-img {
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 1.875rem;
+        top: 1.25rem;
+    }
+    &__item-comes {
+        position: absolute;
+        right: 1.875rem;
+        top: 3.125rem;
+    }
+    &__item-title {
+        font-family: $gilroyFonts;
+        font-weight: 700;
+        font-size: 1.5625rem;
+        color: $whiteColor;
+        margin-top: 1.25rem;
+        margin-bottom: 1.1875rem;
+    }
+    &__item-subtitle {
+        font-family: $worksansFonts;
+        font-weight: $fontWeight;
+        font-size: 1rem;
+        color: $grayColor;
+        margin-bottom: 2.125rem;
+        span{
+            color: $ellowColor;
+        }
+    }
+    &__item-text {
+        font-family: $worksansFonts;
+        font-weight: $fontWeight;
+        font-size: 16px;
+        color: $grayColor;
+        line-height: 162.5%;
+        width: 28.125rem;
+        max-width: 100%;
+    }
+}
+
+
+.reviews__item-pagination{
+     display: flex;
+     justify-content: center;
+}
+
+.reviews__item-pagination .swiper-pagination-bullets{
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+}
+
+.reviews__item-pagination .swiper-pagination-bullet{
+      background-color: $ellowColor;
+      width: 13px;
+      height: 13px;
+}
+
+@media (max-width: 1300px){
+    .reviews__inner{
+        width: 75%;
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 840px){
+    .reviews__inner{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px){
+    .reviews__inner{
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+    .reviews__inner{
+        width: 75%;
+    }
+}
+
+@media (max-width: 400px){
+    .reviews__inner{
+        width: 90%;
+    }
+}

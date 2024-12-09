@@ -1,0 +1,100 @@
+.form {
+  margin-top: 7.1875rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.form__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.4375rem 0;
+}
+.form__subtitle {
+  font-family: "Work+Sans", sans-serif;
+  color: #272727;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
+}
+.form__title {
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 700;
+  font-size: 7.5rem;
+  color: #272727;
+  margin-bottom: 3.375rem;
+  min-width: 610px;
+  padding-left: 1.875rem;
+}
+.form__body {
+  display: flex;
+  align-items: center;
+}
+.form__body-input {
+  background-color: #FFFFFF;
+  width: 19.375rem;
+  padding: 1.5625rem 0.625rem 1.5625rem 2.625rem;
+}
+.form__body-input::placeholder {
+  color: #272727;
+  font-weight: 400;
+  font-size: 0.75rem;
+  font-family: "Work+Sans", sans-serif;
+}
+.form__body-button {
+  background-color: #272727;
+  color: #FFFFFF;
+  font-family: "Work+Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 1.625rem 4.0625rem;
+  transition: all 0.3s ease;
+}
+.form__body-button:hover {
+  background-color: #a59696;
+}
+
+@media (max-width: 768px) {
+  .form__inner {
+    padding: 3rem 0 3.75rem 0;
+  }
+  .form__subtitle {
+    font-size: 0.75rem;
+  }
+  .form__title {
+    font-size: 4.375rem;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .form__body-input {
+    width: 285px;
+    padding: 0.875rem 0 0.875rem 1.75rem;
+    padding-right: 10px;
+  }
+  .form__body-button {
+    padding: 0.9375rem 4.0625rem;
+  }
+}
+@media (max-width: 620px) {
+  .form {
+    margin-top: 2.5rem;
+  }
+  .form__title {
+    min-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .form__title {
+    font-size: 3.125rem;
+    margin-bottom: 1.875rem;
+  }
+  .form__body-input {
+    padding: 0.875rem;
+    padding-left: 0.625rem;
+    width: 11.8125rem;
+  }
+  .form__body-button {
+    padding: 0.9375rem 2.1875rem;
+  }
+}/*# sourceMappingURL=form.css.map */

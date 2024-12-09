@@ -1,0 +1,115 @@
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$whiteColor: #FFFFFF;
+$grayColor: #929292;
+$fontWeight: 400;
+
+
+
+.faq {
+    margin-top: 6.875rem;
+    &__inner {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-family: $gilroyFonts;
+        color: $whiteColor;
+        font-weight: 700;
+        font-size: 4.375rem;
+        align-self: flex-start;
+        // margin-left: 6.875rem;
+        position: relative;
+        padding-bottom: 1.25rem;
+    }
+    &__accordion {
+    
+    }
+    &__accordion-item {
+        padding-top: 1.25rem;
+        padding-right: 70px;
+        position: relative;
+        border-bottom: 1px solid $grayColor;
+        max-width: 69.375rem;
+    }
+    &__accordion--line{
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0.0625rem;
+            background-color: $grayColor;
+        }
+    }
+    &__accordion-title {
+        color: $whiteColor;
+        font-weight: $fontWeight;
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+        font-family: $worksansFonts;
+        cursor: pointer;
+        &::after{
+            content: url("./../../image/faq/arrow.svg");
+            position: absolute;
+            right: 0;
+            top: 0.9375rem;
+            transition: .3s ease;
+        }
+        &.faq-accordion--active::after{
+            transform: rotate(90deg);
+        }
+    }
+    &__accordion-content {
+        margin-left: 4.375rem;
+        color: #E8E8E8;
+        font-family: $worksansFonts;
+        font-weight: $fontWeight;
+        font-size: 14px;
+        line-height: 160%;
+        opacity: 0;
+        max-height: 0;
+        transition: .3s ease;
+        &.faq-accordion--visible{
+            opacity: 1;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .faq{
+        margin-top: 4.375rem;
+    }
+    .faq__accordion-item{
+        padding-right: 1.875rem;
+    }
+   .faq__title{
+     font-size: 1.875rem;
+     margin-bottom: 2.5rem;
+   }
+   .faq__accordion-title{
+    font-size: 1rem;
+    line-height: 1.3;
+   }
+   .faq__accordion-content{
+      margin-left: 0;
+   }
+}
+
+@media (max-width: 380px){
+    .faq{
+        margin-top: 3.125rem;
+    }
+   .faq__title{
+     font-size: 1.5rem;
+     margin-bottom: 1.25rem;
+   }
+   .faq__accordion-title{
+    font-size: 0.75rem;
+   }
+}
+

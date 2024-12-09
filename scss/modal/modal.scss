@@ -1,0 +1,134 @@
+$whiteColor: #FFFFFF;
+$ellowColor: #FCD54C;
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$blackColor: #000000;
+$fontWeight: 400;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99998;
+    background-color: #272727E5;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s ease;
+    transform: scale(0);
+    &.open-popab{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+    &.open-popab .modal__inner {
+        transform: scale(1);
+    }
+    &__inner {
+        background-color: $whiteColor;
+        padding:  4.1875rem 8.75rem 2.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transform: scale(0);
+        transition: transform 1s;
+    }
+    &__icon{
+        position: absolute;
+        right: -4.375rem;
+        top: -1.625rem;
+        width: 1.875rem;
+        height: 1.875rem;
+
+    }
+    &__title {
+        font-family: $gilroyFonts;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 0.4375rem;
+    }
+    &__text {
+        $worksansFonts: "Work+Sans", sans-serif;
+        font-weight: $fontWeight;
+        font-size: 1.25rem;
+        margin-bottom: 2.9375rem;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.25rem;
+    }
+    &__input {
+        width: 28.3125rem;
+        border-bottom: 1px solid #929292;
+        padding-bottom: 0.9375rem;
+        &::placeholder{
+            font-family: $gilroyFonts;
+            font-weight: $fontWeight;
+            font-size: 1rem;
+        }
+    }
+    &__buton {
+        background-color: $ellowColor;
+        color: $blackColor;
+        font-family: $worksansFonts;
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 1rem 5.3125rem;
+        transition: background-color .3s ease;
+        &:hover{
+            background-color: #927a21;
+            color: $whiteColor;
+        }
+    }
+}
+
+
+@media (max-width: 800px){
+    .modal__inner{
+       padding-left: 6.25rem;
+       padding-right: 6.25rem;
+    }
+    .modal__input{
+       width: 100%;
+    }
+    .modal__title, .modal__text{
+        text-align: center;
+    }
+    .modal__icon{
+        right: 2.5rem;
+        top: 1.625rem;
+    }
+}
+
+@media (max-width: 490px){
+    .modal__icon{
+        right: 1.25rem;
+    }
+    .modal__inner{
+       padding-left: 4.375rem;
+       padding-right: 4.375rem;
+     }
+    .modal__form{
+        
+    }
+    .modal__input{
+        
+    }
+    .modal__buton{
+       
+    }
+    .modal__title{
+        font-size: 1.875rem;
+    }
+    .modal__text{
+         font-size: 1.125rem;
+    }
+}

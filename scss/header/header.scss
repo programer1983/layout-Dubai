@@ -1,0 +1,264 @@
+$gilroyFonts: 'Gilroy-ExtraBold';
+$worksansFonts: "Work+Sans", sans-serif;
+$ellowColor: #FCD54C;
+$blackColor: #000000;
+$whiteColor: #FFFFFF;
+$grayColor: #929292;
+
+.header {
+    padding-top: 1.25rem;
+    padding-bottom: 1.625rem;
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.25rem;
+        background-image: url("./../../image/header/header__decor.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        padding: 0.4375rem 0 0.9375rem 0.9375rem;
+    }
+    &__logo-title {
+        color: $whiteColor;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 123.785714%;
+        font-family: $gilroyFonts;
+        @media (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+    &__logo-text {
+        font-size: 11px;
+        font-weight: 400;
+        font-family: $worksansFonts;
+        color: rgba($whiteColor, 0.5);
+        @media (max-width: 768px){
+            font-size: 10px;
+        }
+    }
+    &__nav {
+        padding-left: 9.5625rem;
+        @media (max-width: 1140px){
+            padding-left: 80px;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 3.125rem;
+        @media (max-width: 1010px){
+            display: none;
+        }
+    }     
+    &__list-item {
+    }
+    &__item-block{
+        position: relative;
+    }
+    &__item-link {
+        color: $whiteColor;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: $gilroyFonts;
+        text-transform: uppercase;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover{
+            color: $ellowColor;
+            border-color: $ellowColor;
+        }
+        @media (max-width: 768px){
+            font-size: 2.25rem;
+        }
+    }
+    &__item-image {
+        position: absolute;
+        right: -15px;
+        top: 3px;
+        transition: transform .3s ease;
+        &.rotate{
+            transform: rotate(180deg);
+        }
+        @media (max-width: 768px){
+            right: -25px;
+            top: 10px;
+            height: 15px;
+            width: 15px;
+        }
+    }
+    &__item-dropdown {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background-color: $blackColor;
+        width: 247px;
+        border: 1px solid $grayColor; 
+        margin-top: 0.875rem;
+        z-index: 2;
+        &.active{
+            display: flex;
+        }
+        @media (max-width: 768px){
+            background-color: transparent;
+            border: none;
+        }
+    }
+    &__dropdown-item {
+        width: 245px;
+        padding: 0.625rem 5.25rem 0.625rem 1.25rem;
+    }
+    &__dropdown-ellow{
+        background-color: $ellowColor;
+        color: #272727;
+        @media (max-width: 768px){
+            background-color: transparent;
+        }
+    }
+    &__dropdown-link {
+        display: block;
+        color: $whiteColor;
+        font-weight: 600;
+        font-size: 0.875rem;
+        font-family: $gilroyFonts;
+        width: 190px;
+    }
+    &__link-black{
+        color: #272727;
+        @media (max-width: 768px){
+            color: $whiteColor;
+        }
+    }
+    &__button {
+        margin-left: 700px;
+        background-color: $ellowColor;
+        color: $blackColor;
+        font-size: 0.875rem;
+        font-weight: 600;
+        font-family: $worksansFonts;
+        padding: 0.75rem 0.875rem;
+        border: none;
+        transition:  background-color .3s ease;
+        &:hover{
+            background-color: #9f831d;
+            color: $whiteColor;
+        }
+        @media (max-width: 1800px){
+            margin-left: 500px;
+        }
+        @media (max-width: 1600px){
+            margin-left: 350px;
+        }
+        @media (max-width: 1450px){
+            margin-left: 200px;
+        }
+        @media (max-width: 1190px){
+            margin-left: 80px;
+        }
+        @media (max-width: 1020px){
+            margin-left: auto;
+        }
+        @media (max-width: 670px){
+            display: none;
+        }
+    }
+    &__buttons {
+        display: flex;
+        column-gap: 0.5rem;
+        padding-left: 7.4375rem;
+        @media (max-width: 1330px){
+            padding-left: 30px;
+        }
+        @media (max-width: 670px){
+            display: none;
+        }
+    }
+    &__buttons-button {
+       font-weight: 600;
+       font-size: 14px;
+       color: $grayColor;
+       font-family: $gilroyFonts;
+       background-color: transparent;
+       border: none;
+    }
+    &__buttons-active{
+        color: $ellowColor;
+    }
+    &__number {
+        color: $whiteColor;
+        font-family: $gilroyFonts;
+        font-size: 1rem;
+        font-weight: 600;
+        padding-left: 53px;
+        @media (max-width: 1330px){
+            padding-left: 22px;
+        }
+        @media (max-width: 670px){
+            display: none;
+        }
+    }
+}
+
+.header__burger {
+    display: none;
+    width: 50px;
+    height: 22px;
+    padding-top: 10px;
+    margin-left: 27px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    @media (max-width: 1010px){
+       display: flex;
+    }
+    @media (max-width: 768px){
+        margin-left: 40px;
+    }
+    @media (max-width: 670px){
+        margin-left: auto;
+    }
+}
+.header__burger span {
+    background-color: $whiteColor;
+    width: 50%;
+    height: 2px;
+    transform: scale(1);
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    background-color: $whiteColor;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.active.header__burger span {
+    transform: scale(0);
+}
+
+.active.header__burger::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.active.header__burger::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
