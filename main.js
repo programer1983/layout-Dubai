@@ -177,22 +177,19 @@ function menuModal(){
 
 const video = document.querySelector('.video__item__sourshe')
 const playBtn = document.querySelector('.video__play')
-const stopBtn = document.querySelector('.video__stop')
+const iconBtn = document.querySelector('.video__button-img')
 
 
-
+playBtn.addEventListener('click', toggleVideoStatus)
 function  toggleVideoStatus(){
   if (video.paused){
     video.play()
-    playBtn.src = "./image/expertise/pause.svg"
+    iconBtn.src = "./image/expertise/pause.svg"
   }else{
     video.pause()
-    playBtn.src = "./image/expertise/play.svg"
+    iconBtn.src = "./image/expertise/play.svg"
   }
 }
-
-playBtn.addEventListener('click', toggleVideoStatus)
-
 
 /* ================================================================================================================ */
 
